@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Earth Information Jukebox transforms NASA Earth visualizations into meaningful sound, making Earth science accessible through sight and hearing."
+    />
+
+    <meta name="theme-color" content="#071426" />
+
+    <title>Earth Information Jukebox | Hear the Earth</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script type="module" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <div
+      id="live-announcements"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-container">
+        <a
+          href="#home"
+          class="logo"
+          aria-label="Earth Information Jukebox home"
+        >
+          <span class="logo-icon" aria-hidden="true">🌍</span>
+          <span>Earth Jukebox</span>
+        </a>
+
+        <nav class="main-navigation" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#explore">Explore Earth</a>
+          <a href="#sonification">Sonification</a>
+          <a href="#voice-guide">Voice Guide</a>
+          <a href="#science">Our Science</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- HERO SECTION -->
+
+      <section class="hero-section" id="home">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow">NASA SPACE APPS CHALLENGE 2026</p>
+
+            <h1>
+              Hear the Earth.
+              <span>Understand its Changes.</span>
+            </h1>
+
+            <p class="hero-description">
+              What if you could hear our changing planet? Earth Information
+              Jukebox transforms NASA Earth visualizations into dynamic sound,
+              creating a new way to experience and understand our planet.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#explore" class="primary-button">Explore Earth</a>
+
+              <a href="#sonification" class="secondary-button">
+                Enter Sonification Studio
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img
+              src="assets/images/earth-hero.png"
+              alt="A view of Earth at night from space, with glowing city lights and a luminous blue atmosphere."
+              class="hero-earth-image"
+              style="
+                display: block;
+                width: 100%;
+                max-width: 600px;
+                height: auto;
+                border-radius: 18px;
+                box-shadow: 0 0 45px rgba(42, 150, 255, 0.25);
+              "
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRODUCTION -->
+
+      <section class="intro-section">
+        <div class="container">
+          <p class="eyebrow">A NEW WAY TO EXPERIENCE EARTH</p>
+
+          <h2>Turning Earth's Visual Stories into Sound</h2>
+
+          <p>
+            NASA provides extraordinary visualizations of our changing planet.
+            However, visual information alone cannot communicate equally to
+            everyone. Our project explores how visual patterns can be translated
+            into sound, creating an additional way to experience Earth science.
+          </p>
+        </div>
+      </section>
+
+      <!-- EARTH EXPLORATION -->
+
+      <section class="explore-section" id="explore">
+        <div class="container">
+          <p class="eyebrow">EXPLORE OUR PLANET</p>
+
+          <h2>Explore Earth Through Different Dimensions</h2>
+
+          <p class="section-description" id="explore-section-description">
+            Explore live weather information through temperature, wind and
+            humidity.
+          </p>
+
+          <div class="exploration-grid">
+            <article class="exploration-card">
+              <span class="card-icon" aria-hidden="true">🌡️</span>
+              <h3>Temperature</h3>
+              <p>Explore temperature patterns and variations across Earth.</p>
+            </article>
+
+            <article class="exploration-card">
+              <span class="card-icon" aria-hidden="true">💨</span>
+              <h3>Wind</h3>
+              <p>
+                Understand patterns of atmospheric movement across the planet.
+              </p>
+            </article>
+
+            <article class="exploration-card">
+              <span class="card-icon" aria-hidden="true">💧</span>
+              <h3>Humidity</h3>
+              <p>Explore moisture levels and changing humidity conditions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- NASA NIGHT LIGHTS -->
+
+      <section class="night-lights-section" id="night-lights">
+        <div class="container">
+          <p class="eyebrow">FEATURED NASA VISUALIZATION</p>
+
+          <h2>Earth at Night: A Changing Planet</h2>
+
+          <p class="section-description">
+            Observe changes in nighttime lighting across different regions of
+            Earth between 2012 and 2023.
+          </p>
+
+          <div class="video-container">
+            <video
+              id="night-lights-video"
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="NASA visualization showing nighttime lighting changes across Earth from 2012 to 2023"
+            >
+              <source src="nasa%20data/nightlights.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+          </div>
+
+          <div class="video-description">
+            <h3>Understanding the Visualization</h3>
+            <p>
+              This NASA visualization presents changes in nighttime lighting
+              intensity between 2012 and 2023.
+            </p>
+            <p>
+              The visualization includes regions where lighting increased,
+              decreased or remained relatively unchanged.
+            </p>
+          </div>
+
+          <div class="colour-legend">
+            <h3>Understanding the Colours</h3>
+
+            <div class="legend-items">
+              <div class="legend-item">
+                <span class="legend-colour increased" aria-hidden="true"></span>
+                <span>Purple: Increased lighting</span>
+              </div>
+
+              <div class="legend-item">
+                <span class="legend-colour unchanged" aria-hidden="true"></span>
+                <span>White: Little or no change</span>
+              </div>
+
+              <div class="legend-item">
+                <span class="legend-colour decreased" aria-hidden="true"></span>
+                <span>Orange: Decreased lighting</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scientific-note">
+            <h3>Scientific Interpretation</h3>
+            <p>
+              Nighttime lighting is an observable feature of Earth's surface.
+              Changes in lighting do not directly measure population, wealth or
+              economic development.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SONIFICATION STUDIO -->
+
+      <section class="sonification-section" id="sonification">
+        <div class="container">
+          <p class="eyebrow">INTERACTIVE AUDIO EXPERIENCE</p>
+
+          <h2>Earth Sonification Studio</h2>
+
+          <p class="section-description">
+            Turn visual information into sound and experience Earth's changing
+            patterns through audio.
+          </p>
+
+          <div class="studio-panel">
+            <div class="studio-introduction">
+              <h3>Night Lights Sonification</h3>
+              <p>
+                The sonification engine analyses the NASA Night Lights video and
+                translates visual features into changing sound.
+              </p>
+            </div>
+
+            <div class="mapping-grid">
+              <div class="mapping-card">
+                <span class="mapping-icon" aria-hidden="true">☀️</span>
+                <h3>Brightness</h3>
+                <p>Brightness of illuminated pixels influences sound pitch.</p>
+              </div>
+
+              <div class="mapping-card">
+                <span class="mapping-icon" aria-hidden="true">↔️</span>
+                <h3>Position</h3>
+                <p>
+                  Horizontal image position influences stereo sound position.
+                </p>
+              </div>
+
+              <div class="mapping-card">
+                <span class="mapping-icon" aria-hidden="true">🎵</span>
+                <h3>Colour</h3>
+                <p>
+                  Purple, orange and neutral lighting regions produce different
+                  sound characteristics.
+                </p>
+              </div>
+
+              <div class="mapping-card">
+                <span class="mapping-icon" aria-hidden="true">⏳</span>
+                <h3>Illumination Density</h3>
+                <p>
+                  The density of illuminated pixels influences sound loudness.
+                </p>
+              </div>
+            </div>
+
+            <div class="audio-controls">
+              <h3>Control Your Earth Sound Experience</h3>
+
+              <div class="control-buttons">
+                <button
+                  type="button"
+                  id="start-sonification"
+                  class="primary-button"
+                >
+                  Start Sonification
+                </button>
+
+                <button
+                  type="button"
+                  id="pause-sonification"
+                  class="secondary-button"
+                >
+                  Pause
+                </button>
+
+                <button
+                  type="button"
+                  id="resume-sonification"
+                  class="secondary-button"
+                >
+                  Resume
+                </button>
+
+                <button
+                  type="button"
+                  id="stop-sonification"
+                  class="stop-button"
+                >
+                  Stop
+                </button>
+              </div>
+
+              <div class="volume-control">
+                <label for="sonification-volume">Sonification Volume</label>
+                <input
+                  type="range"
+                  id="sonification-volume"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="0.25"
+                />
+              </div>
+
+              <p
+                id="sonification-status"
+                class="status-message"
+                role="status"
+                aria-live="polite"
+              >
+                Sonification engine is waiting to start.
+              </p>
+            </div>
+
+            <div id="sound-mapping-description" class="mapping-explanation">
+              Illuminated-pixel density controls loudness, brightness controls
+              pitch, horizontal position controls stereo panning, and colour
+              categories influence timbre and octave.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCESSIBILITY AND VOICE GUIDE -->
+
+      <section class="accessibility-section" id="voice-guide">
+        <div class="container">
+          <p class="eyebrow">ACCESSIBLE EARTH SCIENCE</p>
+
+          <h2>Experience Earth Through Voice</h2>
+
+          <p class="section-description">
+            Earth science should be accessible to everyone. Our voice-guided
+            experience provides spoken information about current weather
+            conditions.
+          </p>
+
+          <div class="voice-guide-panel">
+            <div class="voice-guide-introduction">
+              <span class="voice-icon" aria-hidden="true">🔊</span>
+              <h3>Voice-Guided Earth Report</h3>
+              <p>
+                Search for a city, country or region to hear a live weather
+                report covering temperature, wind and humidity. Each section is
+                introduced clearly in a sequential spoken experience.
+              </p>
+            </div>
+
+            <div class="report-sequence">
+              <h3>Earth Report Sequence</h3>
+              <ol>
+                <li>Temperature</li>
+                <li>Wind</li>
+                <li>Humidity</li>
+              </ol>
+            </div>
+
+            <div class="voice-controls">
+              <h3>Voice Controls</h3>
+
+              <div class="control-buttons">
+                <button
+                  type="button"
+                  id="start-voice-report"
+                  class="primary-button"
+                >
+                  Speak Weather Report
+                </button>
+
+                <button
+                  type="button"
+                  id="pause-voice-report"
+                  class="secondary-button"
+                >
+                  Pause Voice
+                </button>
+
+                <button
+                  type="button"
+                  id="resume-voice-report"
+                  class="secondary-button"
+                >
+                  Resume Voice
+                </button>
+
+                <button
+                  type="button"
+                  id="repeat-voice-report"
+                  class="secondary-button"
+                >
+                  Repeat Section
+                </button>
+
+                <button
+                  type="button"
+                  id="stop-voice-report"
+                  class="stop-button"
+                >
+                  Stop Voice
+                </button>
+              </div>
+
+              <div class="voice-settings">
+                <div class="volume-control">
+                  <label for="voice-volume">Voice Volume</label>
+                  <input
+                    type="range"
+                    id="voice-volume"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value="1"
+                  />
+                </div>
+
+                <div class="volume-control">
+                  <label for="voice-speed">Voice Speed</label>
+                  <input
+                    type="range"
+                    id="voice-speed"
+                    min="0.5"
+                    max="2"
+                    step="0.1"
+                    value="1"
+                  />
+                </div>
+              </div>
+
+              <div class="report-progress">
+                <h4>Current Report Section</h4>
+
+                <p id="current-report-section" aria-live="polite">
+                  Waiting to begin.
+                </p>
+
+                <p
+                  id="voice-status"
+                  class="status-message"
+                  role="status"
+                  aria-live="polite"
+                >
+                  Voice guidance is ready.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accessibility-grid">
+            <article class="accessibility-card">
+              <h3>Screen Reader Support</h3>
+              <p>
+                Semantic page structure and accessible descriptions help
+                screen-reader users navigate the experience.
+              </p>
+            </article>
+
+            <article class="accessibility-card">
+              <h3>Keyboard Navigation</h3>
+              <p>Interactive controls can be accessed using the keyboard.</p>
+            </article>
+
+            <article class="accessibility-card">
+              <h3>Audio-Based Understanding</h3>
+              <p>
+                Data-driven sonification provides an alternative way to
+                experience visual information.
+              </p>
+            </article>
+
+            <article class="accessibility-card">
+              <h3>Voice Guidance</h3>
+              <p>
+                Sequential spoken explanations make Earth information easier to
+                follow without relying on visuals.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCIENCE AND METHODOLOGY -->
+
+      <section class="science-section" id="science">
+        <div class="container">
+          <p class="eyebrow">BEHIND THE EXPERIENCE</p>
+
+          <h2>How Our Sonification Works</h2>
+
+          <p class="section-description">
+            Our system connects NASA visual information with an audio processing
+            engine.
+          </p>
+
+          <div class="science-steps">
+            <article class="science-step">
+              <span class="step-number">01</span>
+              <h3>NASA Visualization</h3>
+              <p>A NASA Earth visualization provides the visual information.</p>
+            </article>
+
+            <article class="science-step">
+              <span class="step-number">02</span>
+              <h3>Visual Analysis</h3>
+              <p>
+                Image processing examines visual features such as brightness,
+                position and colour.
+              </p>
+            </article>
+
+            <article class="science-step">
+              <span class="step-number">03</span>
+              <h3>Sound Mapping</h3>
+              <p>
+                Visual features are mapped to audio characteristics such as
+                pitch, intensity, timbre and stereo position.
+              </p>
+            </article>
+
+            <article class="science-step">
+              <span class="step-number">04</span>
+              <h3>Audio Experience</h3>
+              <p>
+                The audio engine produces sound that changes with the analysed
+                visual information.
+              </p>
+            </article>
+          </div>
+
+          <div class="methodology-note">
+            <h3>Our Sound Mapping Method</h3>
+            <p>
+              The sound mappings used in this project are our own design
+              choices. They are not official NASA sound mappings.
+            </p>
+            <p>
+              Our objective is to communicate visual patterns through meaningful
+              and understandable audio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NASA SOURCES -->
+
+      <section class="sources-section">
+        <div class="container">
+          <p class="eyebrow">DATA AND REFERENCES</p>
+
+          <h2>NASA Data Sources</h2>
+
+          <p class="section-description">
+            This project uses NASA scientific visualizations and resources.
+          </p>
+
+          <div class="source-list">
+            <article class="source-item">
+              <h3>NASA Earth at Night: Lighting Changes</h3>
+              <p>
+                Visualization of changes in nighttime lighting between 2012 and
+                2023.
+              </p>
+              <a
+                id="night-lights-source"
+                href="https://svs.gsfc.nasa.gov/5313/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View NASA Source</a
+              >
+            </article>
+
+            <article class="source-item">
+              <h3>Earth Information Center</h3>
+              <p>NASA's Earth Information Center visualization resources.</p>
+              <a
+                href="https://svs.gsfc.nasa.gov/gallery/earth-information-center/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Explore NASA Resources</a
+              >
+            </article>
+
+            <article class="source-item">
+              <h3>Global Sea Surface Currents and Temperature</h3>
+              <p>
+                NASA visualization of ocean surface currents and temperature.
+              </p>
+              <a
+                href="https://svs.gsfc.nasa.gov/3912/#media_group_349716"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View NASA Visualization</a
+              >
+            </article>
+
+            <article class="source-item">
+              <h3>GEOS Aerosols</h3>
+              <p>NASA visualization of atmospheric aerosols.</p>
+              <a
+                href="https://svs.gsfc.nasa.gov/5669/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View NASA Visualization</a
+              >
+            </article>
+
+            <article class="source-item">
+              <h3>Air Quality Model Runs</h3>
+              <p>NASA atmospheric and air quality model visualizations.</p>
+              <a
+                href="https://svs.gsfc.nasa.gov/5533/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View NASA Visualization</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+      <div class="container">
+        <h2>Earth Information Jukebox</h2>
+        <p>Hear the Earth. See the Earth. Understand our changing planet.</p>
+        <p class="footer-note">
+          An independent project created for NASA Space Apps Challenge 2026.
+        </p>
+        <p class="footer-note">NASA does not endorse this project.</p>
+      </div>
+    </footer>
+  </body>
+</html>
